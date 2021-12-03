@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoky Effect</title>
+    <style>
+        body,html{
+            background-color: black;
+            overflow: hidden;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+        }
+        .smoky{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+        .smoky h1{
+            margin: 10px;
+            color: white;
+            font-size: 200px;
+        }
+        .s{
+            animation-name: smoke;
+            animation-duration: 3s;
+            animation-delay: 2s;
+        }
+        .m{
+            animation-name: smoke;
+            animation-duration: 3s;
+            animation-delay: 2.2s;
+        }
+        .o{
+            animation-name: smoke;
+            animation-duration: 3s;
+            animation-delay: 2.4s;
+        }
+        .k{
+            animation-name: smoke;
+            animation-duration: 3s;
+            animation-delay: 2.6s;
+        }
+        .y{
+            animation-name: smoke;
+            animation-duration: 3s;
+            animation-delay: 2.8s;
+        }
+          @keyframes smoke{
+            0%{
+                transform: rotate(0deg) translateY(0%);
+            }
+            50%{
+                transform: rotate(45deg) translateY(-300px);
+                opacity: 0;
+                filter: blur(25px);
+            }
+            100%{
+                transform: rotate(0deg) translateY(0px);
+                opacity: 1;
+                filter: blur(0px);
+            }
+        }
+      @media(max-width:480px){
+          .smoky h1{
+              font-size: 60px;
+          }
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="smoky">
+            <h1 class="s">S</h1>
+            <h1 class="m">M</h1>
+            <h1 class="o">O</h1>
+            <h1 class="k">K</h1>
+            <h1 class="y">Y</h1>
+        </div>
+    </div>
+</body>
+</html>
